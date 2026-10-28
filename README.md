@@ -22,13 +22,17 @@ select your board from the configuration dropdown in the toolbar.
 
 ## Getting started
 
+The project is built in SEGGER Embedded Studio, but flashing is done with
+**STM32CubeProgrammer** – no ST-LINK license required.
+
 1. Open `ARM_kit.emProject` in SEGGER Embedded Studio.
 2. Select the configuration that matches your board (e.g. **F411 Debug**) in the toolbar dropdown.
 3. To run an example from the `examples/` folder:
    - Right-click the example file → **Options** → **Exclude From Build** = **No**
    - Set `src/main.c` → **Options** → **Exclude From Build** = **Yes**
    - *(Only one file with `main()` may be active at a time)*
-4. **F7** – build, **F5** – flash and start the debugger.
+4. **F7** – build.
+5. Open STM32CubeProgrammer, connect your board, and flash the `.elf` / `.hex` file from the `Output/` folder.
 
 ---
 
